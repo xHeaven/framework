@@ -55,7 +55,7 @@ class ConnectToDatabase implements Step
         $version = $pdo->query('SELECT VERSION()')->fetchColumn();
 
         if (Str::contains($version, 'MariaDB')) {
-            if (version_compare($version, '10.10.0', '<')) {
+            if (version_compare($version, '10.3.0', '<')) {
                 throw new RangeException("MariaDB version ($version) too low. You need at least MariaDB 10.10");
             }
         } else {
