@@ -1,5 +1,24 @@
 # Changelog
 
+## [v1.8.9](https://github.com/flarum/framework/compare/v1.8.8...v1.8.9)
+### Fixed
+* change condition when unread label is shown in Scrubber (https://github.com/flarum/framework/pull/4116)
+* resolve a11y warnings in Admin Frontend (https://github.com/flarum/framework/pull/4114)
+* return empty object if selected mail driver is unavailable (https://github.com/flarum/framework/pull/4113)
+### Changed
+* change private to protected, allowing extensibility (https://github.com/flarum/framework/pull/4119)
+* change length of email field (https://github.com/flarum/framework/pull/4117)
+### Added
+* Implement Support for Translatable Validation Attribute Errors (https://github.com/flarum/framework/pull/4070)
+* PHP 8.4 support (https://github.com/flarum/framework/pull/4105)
+* conditional extend whenExtensionDisabled (https://github.com/flarum/framework/pull/4107)
+
+## [v1.8.8](https://github.com/flarum/framework/compare/v1.8.7...v1.8.8)
+### Fixed
+* previously suspended admin users cannot remove their avatar after suspension (https://github.com/flarum/framework/pull/4071)
+* new search term not being passed (https://github.com/flarum/framework/pull/4083)
+* postfooter did not apply the empty subclass (https://github.com/flarum/framework/pull/4085)
+
 ## [v1.8.7](https://github.com/flarum/framework/compare/v1.8.6...v1.8.7)
 ### Fixed
 * BasicsPage not viewable if only one language pack enabled, and/or `flarum/nicknames` not enabled (https://github.com/flarum/framework/pull/4062)
