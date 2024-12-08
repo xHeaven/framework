@@ -49,6 +49,7 @@
 - use `::class` syntax to fetch class name instead of `get_class()` function [#3910]
 - use `hex_color` rule for color validation [#3936]
 - use `str_contains` instead of `strpos` [#3841]
+- graceful failure from extend/override errors [#4134]
 ### Fixed
 - (a11y) convert empty links to buttons [#3926]
 - (approval) `PostWasApproved` event triggered incorrectly [#3930]
