@@ -63,6 +63,7 @@ class AdminServiceProvider extends AbstractServiceProvider
                 HttpMiddleware\ReferrerPolicyHeader::class,
                 HttpMiddleware\ContentTypeOptionsHeader::class,
                 Middleware\DisableBrowserCache::class,
+                Middleware\GatherDebugInformation::class,
             ];
         });
 
