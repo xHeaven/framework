@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * This file is part of Flarum.
+ *
+ * For detailed copyright and license information, please view the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Flarum\Foundation\Info\Renderer;
 
 use Flarum\Foundation\Info\RendererInterface;
@@ -10,7 +17,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 class CliRenderer implements RendererInterface
 {
     public function __construct(protected OutputInterface $output)
-    {}
+    {
+    }
 
     public function heading(string $title): void
     {

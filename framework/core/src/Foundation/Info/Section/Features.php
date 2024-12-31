@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * This file is part of Flarum.
+ *
+ * For detailed copyright and license information, please view the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Flarum\Foundation\Info\Section;
 
 use Flarum\Foundation\ApplicationInfoProvider;
@@ -13,8 +20,7 @@ class Features implements SectionInterface
     public function __construct(
         protected ApplicationInfoProvider $appInfo,
         protected Container $container
-    )
-    {
+    ) {
     }
 
     public function __invoke(RendererInterface $renderer): void
@@ -51,7 +57,7 @@ class Features implements SectionInterface
         $configured = $this->container->make('flarum.mail.configured_driver');
 
         if ($driver instanceof NullDriver) {
-            $configured .= " (not active)";
+            $configured .= ' (not active)';
         }
 
         return $configured;

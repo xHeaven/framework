@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * This file is part of Flarum.
+ *
+ * For detailed copyright and license information, please view the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Flarum\Admin\Middleware;
 
 use Flarum\Settings\SettingsRepositoryInterface;
@@ -22,7 +29,7 @@ class GatherDebugInformation implements Middleware
         $currentUser = get_current_user();
         if ($user !== $currentUser) {
             $this->settings->set(
-                "core.web_user",
+                'core.web_user',
                 $currentUser
             );
         }

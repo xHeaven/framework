@@ -10,18 +10,10 @@
 namespace Flarum\Foundation\Console;
 
 use Flarum\Console\AbstractCommand;
-use Flarum\Extension\ExtensionManager;
-use Flarum\Foundation\Application;
-use Flarum\Foundation\ApplicationInfoProvider;
-use Flarum\Foundation\Config;
 use Flarum\Foundation\Info\Renderer\CliRenderer;
 use Flarum\Foundation\Info\Report;
-use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Container\Container;
-use Illuminate\Database\ConnectionInterface;
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Helper\Table;
-use Symfony\Component\Console\Helper\TableStyle;
 
 class InfoCommand extends AbstractCommand
 {

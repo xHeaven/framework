@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * This file is part of Flarum.
+ *
+ * For detailed copyright and license information, please view the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Flarum\Foundation\Info\Section;
 
 use Flarum\Foundation\Config;
@@ -20,7 +27,7 @@ class Debug implements SectionInterface
         );
 
         if ($this->config->inDebugMode()) {
-            $renderer->heading("Debug mode should not be enabled in production; this will cause javascript and stylesheets to be recompiled on each visit.");
+            $renderer->heading('Debug mode should not be enabled in production; this will cause javascript and stylesheets to be recompiled on each visit.');
         }
     }
 }

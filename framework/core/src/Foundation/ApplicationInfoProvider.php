@@ -44,7 +44,7 @@ class ApplicationInfoProvider
     {
         $status = $this->settings->get('schedule.last_run');
 
-        $key = match(true) {
+        $key = match (true) {
             ! $status => 'never-run',
             Carbon::parse($status) > Carbon::now()->subMinutes(5) => 'active',
             default => 'inactive'

@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * This file is part of Flarum.
+ *
+ * For detailed copyright and license information, please view the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Flarum\Foundation\Info;
 
 use Illuminate\Contracts\Container\Container;
@@ -17,8 +24,8 @@ class Report
     public function __construct(
         protected RendererInterface $renderer,
         protected Container $container
-    )
-    {}
+    ) {
+    }
 
     public function render(): void
     {
@@ -26,7 +33,7 @@ class Report
 
         $this->renderer->open();
 
-        foreach($sections as &$section) {
+        foreach ($sections as &$section) {
             $section = $this->container->make($section);
 
             $section($this->renderer);
