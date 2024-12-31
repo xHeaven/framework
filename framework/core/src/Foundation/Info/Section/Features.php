@@ -13,12 +13,14 @@ use Flarum\Foundation\ApplicationInfoProvider;
 use Flarum\Foundation\Info\RendererInterface;
 use Flarum\Foundation\Info\SectionInterface;
 use Flarum\Mail\NullDriver;
+use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Container\Container;
 
 class Features implements SectionInterface
 {
     public function __construct(
         protected ApplicationInfoProvider $appInfo,
+        protected SettingsRepositoryInterface $settings,
         protected Container $container
     ) {
     }
@@ -54,7 +56,7 @@ class Features implements SectionInterface
     protected function mail()
     {
         $driver = $this->container->make('mail.driver');
-        $configured = $this->container->make('flarum.mail.configured_driver');
+        $configured = $this->settings->get('mail_driver');
 
         if ($driver instanceof NullDriver) {
             $configured .= ' (not active)';

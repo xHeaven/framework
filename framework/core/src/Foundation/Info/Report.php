@@ -16,8 +16,10 @@ class Report
     protected array $sections = [
         Section\CoreVersion::class,
         Section\PHP::class,
+        Section\Database::class,
         Section\EnabledExtensions::class,
         Section\Features::class,
+        Section\Webserver::class,
         Section\Debug::class,
     ];
 
