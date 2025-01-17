@@ -29,7 +29,7 @@ class Translator extends BaseTranslator implements TranslatorInterface
 
     public function getCatalogue(?string $locale = null): MessageCatalogueInterface
     {
-        if (null === $locale) {
+        if ($locale === null) {
             $locale = $this->getLocale();
         } else {
             $this->assertValidLocale($locale);
