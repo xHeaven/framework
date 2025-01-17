@@ -176,11 +176,8 @@ class Migrator
 
     /**
      * Get all of the migration files in a given path.
-     *
-     * @param  string $path
-     * @return array
      */
-    public function getMigrationFiles($path)
+    public function getMigrationFiles(string $path): array
     {
         $files = $this->files->glob($path.'/*_*.php');
 

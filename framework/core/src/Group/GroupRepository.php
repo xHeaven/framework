@@ -17,7 +17,7 @@ class GroupRepository
     /**
      * @return Builder<Group>
      */
-    public function query()
+    public function query(): Builder
     {
         return Group::query();
     }

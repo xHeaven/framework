@@ -64,7 +64,7 @@ class LogInController implements RequestHandlerInterface
         $response = $this->apiClient->withParentRequest($request)->withBody($params)->post('/token');
 
         if ($response->getStatusCode() === 200) {
-            $data = json_decode($response->getBody());
+            $data = json_decode($response->getBody(), false);
 
             $token = AccessToken::findValid($data->token);
 

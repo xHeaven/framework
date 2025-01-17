@@ -72,12 +72,13 @@ class Posts
     protected function getApiDocument(Request $request, array $params): ?object
     {
         return json_decode(
-            $this->api
+            json: $this->api
                 ->withoutErrorHandling()
                 ->withParentRequest($request)
                 ->withQueryParams($params)
                 ->get('/posts')
-                ->getBody()
+                ->getBody(),
+            associative: false
         );
     }
 }
