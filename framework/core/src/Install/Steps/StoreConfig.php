@@ -16,10 +16,10 @@ use Flarum\Install\ReversibleStep;
 readonly class StoreConfig implements ReversibleStep
 {
     public function __construct(
-        private bool           $debugMode,
+        private bool $debugMode,
         private DatabaseConfig $dbConfig,
-        private BaseUrl        $baseUrl,
-        private string         $configFile
+        private BaseUrl $baseUrl,
+        private string $configFile
     ) {
     }
 

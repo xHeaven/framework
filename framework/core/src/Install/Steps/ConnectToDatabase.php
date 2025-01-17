@@ -28,8 +28,8 @@ readonly class ConnectToDatabase implements Step
 {
     public function __construct(
         private DatabaseConfig $dbConfig,
-        private Closure        $store,
-        private string         $basePath
+        private Closure $store,
+        private string $basePath
     ) {
     }
 

@@ -19,7 +19,7 @@ readonly class CreateAdminUser implements Step
 {
     public function __construct(
         private ConnectionInterface $database,
-        private AdminUser           $admin,
+        private AdminUser $admin,
         #[\SensitiveParameter] private ?string $accessToken = null
     ) {
     }

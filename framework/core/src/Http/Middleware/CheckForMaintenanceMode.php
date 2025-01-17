@@ -21,7 +21,7 @@ readonly class CheckForMaintenanceMode implements MiddlewareInterface
 {
     public function __construct(
         private MaintenanceMode $maintenance,
-        private array           $exemptRoutes,
+        private array $exemptRoutes,
     ) {
     }
 

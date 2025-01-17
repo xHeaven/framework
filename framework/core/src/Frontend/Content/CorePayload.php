@@ -20,8 +20,8 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 readonly class CorePayload
 {
     public function __construct(
-        private LocaleManager               $locales,
-        private MaintenanceMode             $maintenance,
+        private LocaleManager $locales,
+        private MaintenanceMode $maintenance,
         private SettingsRepositoryInterface $settings
     ) {
     }

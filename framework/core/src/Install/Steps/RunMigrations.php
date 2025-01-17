@@ -19,8 +19,8 @@ readonly class RunMigrations implements Step
 {
     public function __construct(
         private ConnectionInterface $database,
-        private string              $driver,
-        private string              $path
+        private string $driver,
+        private string $path
     ) {
     }
 
