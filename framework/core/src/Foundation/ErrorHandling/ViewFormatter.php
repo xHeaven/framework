@@ -54,9 +54,9 @@ class ViewFormatter implements HttpFormatter
 
         if (in_array($type, self::ERRORS_WITH_VIEWS)) {
             return "flarum.forum::error.$type";
-        } else {
-            return 'flarum.forum::error.default';
         }
+
+        return 'flarum.forum::error.default';
     }
 
     private function getMessage(HandledError $error): string

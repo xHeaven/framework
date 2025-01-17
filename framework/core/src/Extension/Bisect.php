@@ -117,9 +117,9 @@ class Bisect
 
         if ($issue) {
             return $this->bisect($this->state->advance($low, $mid));
-        } else {
-            return $this->bisect($this->state->advance($mid + 1, $high));
         }
+
+        return $this->bisect($this->state->advance($mid + 1, $high));
     }
 
     protected function foundIssue(string $id): array
