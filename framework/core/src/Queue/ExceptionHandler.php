@@ -13,10 +13,10 @@ use Illuminate\Contracts\Debug\ExceptionHandler as ExceptionHandling;
 use Psr\Log\LoggerInterface;
 use Throwable;
 
-class ExceptionHandler implements ExceptionHandling
+readonly class ExceptionHandler implements ExceptionHandling
 {
     public function __construct(
-        private readonly LoggerInterface $logger
+        private LoggerInterface $logger
     ) {
     }
 

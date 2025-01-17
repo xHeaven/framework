@@ -21,10 +21,10 @@ use Laminas\Stratigility\Middleware\ErrorResponseGenerator;
 use Psr\Log\LoggerInterface;
 use Throwable;
 
-class Server
+readonly class Server
 {
     public function __construct(
-        private readonly SiteInterface $site
+        private SiteInterface $site
     ) {
     }
 
