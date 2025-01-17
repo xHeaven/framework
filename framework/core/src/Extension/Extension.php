@@ -436,7 +436,7 @@ class Extension implements Arrayable
             return null;
         }
 
-        if ($direction == 'up') {
+        if ($direction === 'up') {
             $migrator->run($this->getPath().'/migrations', $this);
         } else {
             return $migrator->reset($this->getPath().'/migrations', $this);
