@@ -15,9 +15,9 @@ use Illuminate\Hashing\BcryptHasher;
 readonly class AdminUser
 {
     public function __construct(
-        private string $username,
-        private string $password,
-        private string $email
+        private string                        $username,
+        #[\SensitiveParameter] private string $password,
+        private string                        $email
     ) {
         $this->validate();
     }

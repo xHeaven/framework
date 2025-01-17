@@ -165,7 +165,7 @@ class AccessToken extends AbstractModel
      * Shortcut to find a valid token.
      * @param string $token Token as sent by the user. We allow non-string values like null so we can directly feed any value from a request.
      */
-    public static function findValid(string $token): ?AccessToken
+    public static function findValid(#[\SensitiveParameter] string $token): ?AccessToken
     {
         return static::query()->whereValid()->where('token', $token)->first();
     }

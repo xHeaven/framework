@@ -15,13 +15,13 @@ use Illuminate\Contracts\Support\Arrayable;
 class DatabaseConfig implements Arrayable
 {
     public function __construct(
-        private readonly string $driver,
-        private readonly ?string $host,
-        private readonly int $port,
-        private string $database,
-        private readonly ?string $username,
-        private readonly ?string $password,
-        private readonly ?string $prefix
+        private readonly string                         $driver,
+        private readonly ?string                        $host,
+        private readonly int                            $port,
+        private string                                  $database,
+        private readonly ?string                        $username,
+        #[\SensitiveParameter] private readonly ?string $password,
+        private readonly ?string                        $prefix
     ) {
         $this->validate();
     }

@@ -25,7 +25,7 @@ trait AccountActivationMailerTrait
     /**
      * Get the data that should be made available to email templates.
      */
-    protected function getEmailData(User $user, EmailToken $token): array
+    protected function getEmailData(User $user, #[\SensitiveParameter] EmailToken $token): array
     {
         return [
             'username' => $user->display_name,

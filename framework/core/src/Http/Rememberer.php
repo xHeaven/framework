@@ -24,7 +24,7 @@ class Rememberer
     /**
      * Sets the remember cookie on a response.
      */
-    public function remember(ResponseInterface $response, RememberAccessToken $token): ResponseInterface
+    public function remember(ResponseInterface $response, #[\SensitiveParameter] RememberAccessToken $token): ResponseInterface
     {
         return FigResponseCookies::set(
             $response,

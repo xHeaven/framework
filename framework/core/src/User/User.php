@@ -207,7 +207,7 @@ class User extends AbstractModel
         return $this;
     }
 
-    public function changePassword(string $password): static
+    public function changePassword(#[\SensitiveParameter] string $password): static
     {
         $this->password = $password;
 
@@ -267,7 +267,7 @@ class User extends AbstractModel
         return static::$displayNameDriver->displayName($this);
     }
 
-    public function checkPassword(string $password): bool
+    public function checkPassword(#[\SensitiveParameter] string $password): bool
     {
         $valid = false;
 
