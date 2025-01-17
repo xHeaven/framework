@@ -64,7 +64,7 @@ class AvatarValidator extends AbstractValidator
         $phpExtensions = ['php', 'php3', 'php4', 'php5', 'phtml'];
         $fileExtension = pathinfo($file->getClientFilename(), PATHINFO_EXTENSION);
 
-        if (in_array(trim(strtolower($fileExtension)), $phpExtensions)) {
+        if (in_array(strtolower(trim($fileExtension)), $phpExtensions)) {
             $this->raise('mimes', [':values' => implode(', ', $allowedTypes)]);
         }
 
