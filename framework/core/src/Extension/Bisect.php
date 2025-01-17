@@ -107,11 +107,11 @@ class Bisect
             return $current;
         }
 
-        if (count($relevantEnabled) === 1 && $issue) {
+        if ($issue && count($relevantEnabled) === 1) {
             return $this->foundIssue($relevantEnabled[0]);
         }
 
-        if (count($relevantDisabled) === 1 && ! $issue) {
+        if (! $issue && count($relevantDisabled) === 1) {
             return $this->foundIssue($relevantDisabled[0]);
         }
 

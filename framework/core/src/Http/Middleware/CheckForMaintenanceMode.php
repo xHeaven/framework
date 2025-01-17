@@ -30,7 +30,7 @@ readonly class CheckForMaintenanceMode implements MiddlewareInterface
         $actor = RequestUtil::getActor($request);
         $isRouteExcluded = in_array($request->getAttribute('routeName'), $this->exemptRoutes, true);
 
-        if ($this->maintenance->inMaintenanceMode() && ! $actor->isAdmin() && ! $isRouteExcluded) {
+        if (! $isRouteExcluded && $this->maintenance->inMaintenanceMode() && ! $actor->isAdmin()) {
             throw new MaintenanceModeException('The forum is currently in maintenance mode.');
         }
 

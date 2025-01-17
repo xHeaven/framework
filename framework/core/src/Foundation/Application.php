@@ -93,7 +93,7 @@ class Application extends IlluminateContainer implements LaravelApplication
 
     public function register($provider, $force = false): ServiceProvider
     {
-        if (($registered = $this->getProvider($provider)) && ! $force) {
+        if (! $force && ($registered = $this->getProvider($provider))) {
             return $registered;
         }
 
