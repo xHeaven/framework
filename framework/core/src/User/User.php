@@ -315,7 +315,7 @@ class User extends AbstractModel
         }
 
         foreach ($this->getPermissions() as $permission) {
-            if (substr($permission, -strlen($match)) === $match) {
+            if (str_ends_with($permission, $match)) {
                 return true;
             }
         }

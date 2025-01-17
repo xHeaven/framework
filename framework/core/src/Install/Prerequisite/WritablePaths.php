@@ -71,7 +71,7 @@ class WritablePaths implements PrerequisiteInterface
             }
         }
 
-        return (substr($path, 0, 1) == '/' ? '/' : '').implode(DIRECTORY_SEPARATOR, $absolutes);
+        return (str_starts_with($path, '/') ? '/' : '').implode(DIRECTORY_SEPARATOR, $absolutes);
     }
 
     private function normalize(array $paths): Collection
