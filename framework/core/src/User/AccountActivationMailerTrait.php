@@ -41,10 +41,10 @@ trait AccountActivationMailerTrait
 
         $this->queue->push(new SendInformationalEmailJob(
             email: $user->email,
+            displayName: Arr::get($data, 'username'),
             subject: $subject,
             body: $body,
-            forumTitle: Arr::get($data, 'forum'),
-            displayName: Arr::get($data, 'username')
+            forumTitle: Arr::get($data, 'forum')
         ));
     }
 }
