@@ -106,7 +106,7 @@ class ExtensionManager
                 $this->setEnabledExtensions($enabledExtensions);
             }
 
-            $this->extensions = $extensions->sortBy(function ($extension, $name) {
+            $this->extensions = $extensions->sortBy(function ($extension) {
                 return $extension->getTitle();
             });
         }

@@ -69,7 +69,7 @@ class Posts
         return $document;
     }
 
-    protected function getApiDocument(Request $request, array $params, ?string $q): ?object
+    protected function getApiDocument(Request $request, array $params): ?object
     {
         return json_decode(
             $this->api
