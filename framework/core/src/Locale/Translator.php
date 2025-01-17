@@ -55,7 +55,7 @@ class Translator extends BaseTranslator implements TranslatorInterface
     {
         foreach ($catalogue->all() as $domain => $messages) {
             foreach ($messages as $id => $translation) {
-                if (! empty($translation) && preg_match(self::REFERENCE_REGEX, $translation, $matches)) {
+                if (! empty($translation) && preg_match(self::REFERENCE_REGEX, $translation)) {
                     $catalogue->set($id, $this->getTranslation($catalogue, $id, $domain), $domain);
                 }
             }

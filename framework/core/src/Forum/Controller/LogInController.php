@@ -48,8 +48,6 @@ class LogInController implements RequestHandlerInterface
         $params = Arr::only($body, ['identification', 'password', 'remember']);
         $isHtmlRequest = RequestUtil::isHtmlRequest($request);
 
-        $errors = null;
-
         if ($isHtmlRequest) {
             $validator = $this->validator->basic()->prepare($body)->validator();
 

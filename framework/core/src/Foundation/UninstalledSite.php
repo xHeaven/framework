@@ -55,7 +55,7 @@ class UninstalledSite implements SiteInterface
         $app->instance('flarum.config', new Config(['url' => $this->baseUrl]));
         $app->alias('flarum.config', Config::class);
         $app->instance('flarum.debug', true);
-        $app->instance('config', $config = $this->getIlluminateConfig());
+        $app->instance('config', $this->getIlluminateConfig());
 
         $this->registerLogger($app);
 

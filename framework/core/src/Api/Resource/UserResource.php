@@ -434,7 +434,7 @@ class UserResource extends AbstractDatabaseResource
 
         try {
             $response = $client->get($url);
-        } catch (\Exception $e) {
+        } catch (\Exception) {
             return null;
         }
 
