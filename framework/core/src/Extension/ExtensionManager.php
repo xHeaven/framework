@@ -470,7 +470,7 @@ class ExtensionManager
         }, $validOutput)); // Reversed as required by Kahn's algorithm.
 
         foreach ($inDegreeCount as $id => $count) {
-            if ($count != 0) {
+            if ($count !== 0) {
                 $circularDependencies[] = $id;
             }
         }
