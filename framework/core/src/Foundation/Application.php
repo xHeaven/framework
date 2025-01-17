@@ -197,7 +197,7 @@ class Application extends IlluminateContainer implements LaravelApplication
     protected function fireAppCallbacks(array $callbacks): void
     {
         foreach ($callbacks as $callback) {
-            call_user_func($callback, $this);
+            $callback($this);
         }
     }
 
