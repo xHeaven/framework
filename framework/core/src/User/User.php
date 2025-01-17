@@ -87,7 +87,7 @@ class User extends AbstractModel
      *
      * @var string[]|null
      */
-    protected $permissions = null;
+    protected ?array $permissions = null;
 
     /**
      * An array of callables, through each of which the user's list of groups is passed
