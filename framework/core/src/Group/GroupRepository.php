@@ -44,7 +44,6 @@ class GroupRepository
      * Scope a query to only include records that are visible to a user.
      *
      * @param Builder<Group> $query
-     * @param User|null $actor
      * @return Builder<Group>
      */
     protected function scopeVisibleTo(Builder $query, ?User $actor = null): Builder

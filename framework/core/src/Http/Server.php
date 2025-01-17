@@ -76,7 +76,6 @@ readonly class Server
      * There is always a risk for this to fail,
      * for example if the container bindings aren't present
      * or if there is a filesystem error.
-     * @param Throwable $error
      * @throws Throwable
      */
     private function cleanBootExceptionLog(Throwable $error): void

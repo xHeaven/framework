@@ -351,9 +351,6 @@ class User extends AbstractModel
             ->whereSubjectVisibleTo($this);
     }
 
-    /**
-     * @return Collection
-     */
     protected function getUnreadNotifications(): Collection
     {
         return $this->unreadNotifications()->get();
@@ -573,8 +570,6 @@ class User extends AbstractModel
     /**
      * Define the relationship with the permissions of all the groups that
      * the user is in.
-     *
-     * @return Builder
      */
     public function permissions(): Builder
     {

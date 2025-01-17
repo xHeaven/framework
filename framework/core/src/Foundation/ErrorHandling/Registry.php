@@ -36,9 +36,6 @@ readonly class Registry
      * of {@see HandledError}.
      *
      * Even for unknown exceptions, a generic fallback will always be returned.
-     *
-     * @param Throwable $error
-     * @return HandledError
      */
     public function handle(Throwable $error): HandledError
     {

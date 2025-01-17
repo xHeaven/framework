@@ -86,9 +86,6 @@ class Group extends AbstractModel
         return $this->belongsToMany(User::class);
     }
 
-    /**
-     * @return HasMany
-     */
     public function permissions(): HasMany
     {
         return $this->hasMany(Permission::class);

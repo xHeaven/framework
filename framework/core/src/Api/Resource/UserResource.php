@@ -231,7 +231,6 @@ class UserResource extends AbstractDatabaseResource
                 })
                 ->set(function (User $user, ?string $value, Context $context) {
                     if ($value) {
-                        /** @var RegistrationToken $token */
                         $token = RegistrationToken::validOrFail($value);
 
                         $context->setParam('token', $token);
