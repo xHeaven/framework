@@ -147,13 +147,10 @@ trait HasEagerLoading
 
     protected function compileWhereEagerLoads(Context $context): array
     {
-        $relations = [];
-
-        foreach ($this->loadRelationWhere as $name => $callable) {
-            $relations[$name] = function ($query) use ($callable, $context) {
-                $callable($query, $context);
-            };
-        }
+        $relations = array_map(
+            callback: fn ($callable) => fn ($query) => $callable($query, $context),
+            array: $this->loadRelationWhere
+        );
 
         return $relations;
     }
