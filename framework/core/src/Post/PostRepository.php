@@ -60,7 +60,7 @@ class PostRepository
             ->skip($start)
             ->take($count);
 
-        foreach ((array) $sort as $field => $order) {
+        foreach ($sort as $field => $order) {
             $query->orderBy($field, $order);
         }
 
@@ -100,7 +100,7 @@ class PostRepository
 
                     // We don't add $number as a binding because for some
                     // reason doing so makes the bindings go out of order.
-                    ->orderByRaw('ABS(CAST(number AS SIGNED) - '.(int) $number.')');
+                    ->orderByRaw('ABS(CAST(number AS SIGNED) - '. $number .')');
             });
 
         return $query->count();

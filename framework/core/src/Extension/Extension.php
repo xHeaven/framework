@@ -452,7 +452,7 @@ class Extension implements Arrayable
      */
     public function toArray(): array
     {
-        return (array) array_merge([
+        return array_merge([
             'id' => $this->getId(),
             'version' => $this->getVersion(),
             'path' => $this->getPath(),
