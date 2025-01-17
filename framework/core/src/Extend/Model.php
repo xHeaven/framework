@@ -13,7 +13,6 @@ use Flarum\Database\AbstractModel;
 use Flarum\Extension\Extension;
 use Flarum\Foundation\ContainerUtil;
 use Illuminate\Contracts\Container\Container;
-use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Arr;
 
 /**

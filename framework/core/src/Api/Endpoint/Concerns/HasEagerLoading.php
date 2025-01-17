@@ -13,7 +13,6 @@ use Closure;
 use Flarum\Api\Resource\AbstractDatabaseResource;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Str;
 use Tobyz\JsonApiServer\Context;
 
