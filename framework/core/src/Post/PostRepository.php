@@ -93,6 +93,7 @@ class PostRepository
             ->whereVisibleTo($actor)
             ->where('number', '<=', $number)
             ->orderBy('number');
+
         return $query->count();
     }
 
